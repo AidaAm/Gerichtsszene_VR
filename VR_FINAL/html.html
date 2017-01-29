@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+</head>
+<body>
+<a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+    <a-assets>
+        <a-asset-item id="mensch" src="fertigeszene.DAE"></a-asset-item>
+    </a-assets>
+    <a-entity collada-model="#mensch"></a-entity>
+	
+	
+	<!--Rotation um x-achse --> 
+	
+	<a-entity id="mensch" rotation="180 0 0">
+    <a-entity id="child-1"></a-entity>
+    </a-entity>
+	
+	<!-- Sound starten wenn bühne um 45grad gedreht-->
+	
+	<a-entity id="ton" geometry="primitive: mensch"
+          position="45 0 0" sound="src: VR_FINAL.m4a; autoplay: true"></a-entity>
+	
+</a-scene>
+</body>
+</html>
+
+
+
+
