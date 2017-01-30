@@ -13,6 +13,15 @@
     </a-assets>
     <a-entity collada-model="#mensch"></a-entity>
 	
+	<!--Farbe -->
+	
+	<a-entity geometry="primitive: mensch" material="color: grey"></a-entity>
+	<a-sky color="#084B8A"></a-sky>
+      <a-entity position="0 0 3.8">
+	  
+	<!--Kamera -->  
+        <a-camera></a-camera>
+	
 	
 	<!--Rotation um x-achse --> 
 	
@@ -23,7 +32,7 @@
 	<!-- Sound starten wenn bühne um 45grad gedreht-->
 	
 	<a-entity id="ton" geometry="primitive: mensch"
-          position="45 0 0" sound="src: VR_FINAL.m4a; autoplay: true"></a-entity>
+          position="45 0 0" sound="src: VR_FINAL_BEARBEITET.mp3; autoplay: true"></a-entity>
 	
 </a-scene>
 </body>
