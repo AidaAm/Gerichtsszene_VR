@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Der gute Mensch von Sezuan</title>
+    <meta name="description" content="Hello, World! • A-Frame">
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+  <a-scene>
+    <a-assets>
+        <a-asset-item id="mensch" src="fertigeszene.DAE"></a-asset-item>
+    </a-assets>
+    <a-entity collada-model="#mensch">
+<!-- Rotation -->
+    <a-animation
+              attribute="rotation" 
+              begin="35000"
+              from="0 0 0" 
+              to="0 360 0"
+              fill="forwards" 
+              repeat="3"
+              dur="100000">
+    </a-animation>
+    </a-entity>
+<!-- Hintergrund -->
+  <a-sky color="#6BB9DD"></a-sky>
+<!-- Kamera -->
+<a-entity>
+  <a-entity position="0 1.8 10">
+  <a-entity camera look-controls>
+</a-entity>
+<!-- Ranzoomen -->
+<a-animation attribute="position"
+                          from="0 1.8 10"
+                          to="0 1.8 5"
+                          begin="30000"
+                          dur="1200">
+</a-animation>
+<!-- Wegzoomen -->
+<a-animation attribute="position"
+                          from="0 1.8 5"
+                          to="0 1.8 250"
+                          begin="208000"
+                          dur="20000">
+</a-animation>
+</a-entity>
+<!--Licht-->
+  <a-light type="ambient" color="#445451"></a-light>
+  <a-light type="point" intensity="1.5" position="1 2 0"></a-light>
+<!-- Sound -->
+  <a-sound src="VR_FINAL_BEARBEITET.mp3" autoplay="true"
+    position="-3 1 -4" volume="10"></a-sound>
+
+
+  </a-scene>
+  </body>
+</html>
